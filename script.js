@@ -17,5 +17,10 @@ $(document).ready(function () {
         var cityName = $(this).attr("id");
         var apiKey = "6406ca836e96fe35d13d0645f945ad0b";
         var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&cnt=5&units=imperial&appid=" + apiKey;
-        
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+        }).then(function (results) {
+            weatherForecast(results);
+        });
     }
