@@ -80,7 +80,6 @@ $(document).ready(function () {
         $("#currentCityInfo").append("<span>" + "(" + currentIntMonth + "/" + currentIntDay + "/" + currentIntYear + ")" + "</span>");
     };
 
-    //weather icon
     
 
     //get uv index severity and color code
@@ -124,7 +123,7 @@ $(document).ready(function () {
             var monthDayYear = currentIntMonth + "/" + currentIntDay + "/" + currentIntYear;
             forecastDateP.append(monthDayYear);
             //icon
-            var forecastWethImg = "assets/images/" + results.daily[i].weather[0].icon + "@2x.png";
+            var forecastWethImg = "./Assets/" + results.daily[i].weather[0].icon + "@2x.png";
             var forecastWethIcon = $("<img>");
             forecastWethIcon.attr("src", forecastWethImg);
             //temp
