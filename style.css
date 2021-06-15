@@ -41,3 +41,19 @@ h1 {
   padding: 4px;
   border-radius: 25%;
 }
+
+.very-high-uvi {
+  background-color: red;
+  padding: 4px;
+  border-radius: 25%;
+}
+
+.extreme-uvi {
+  background-color: purple;
+  padding: 4px;
+  border-radius: 25%;
+}
+
+.forecast-square {
+  border: 5px solid black;
+}
