@@ -81,12 +81,7 @@ $(document).ready(function () {
     };
 
     //weather icon
-    function weatherIcon(currentWethIcon) {
-        var currentWethImg = "assets/images/" + currentWethIcon + "@2x.png";
-        var currentWethIconImg = $("<img>");
-        currentWethIconImg.attr("src", currentWethImg);
-        $("#currentCityInfo").append(currentWethIconImg);
-    };
+    
 
     //get uv index severity and color code
     function uviIndexSeverity(currentCityUvi) {
