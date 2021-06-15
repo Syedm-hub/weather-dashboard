@@ -157,3 +157,11 @@ $(document).ready(function () {
             weatherIcon(currentWethIcon);
         });
     };
+
+    function addToSearchHist(newCityName) {
+        initLocalStorage();
+        var currentSrchHist = JSON.parse(localStorage.getItem("prevCityWeatherSrch"));
+        currentSrchHist.unshift(newCityName);
+        localStorage.setItem("prevCityWeatherSrch", JSON.stringify(currentSrchHist));
+        dispalySearchHist();
+    };
