@@ -112,7 +112,8 @@ $(document).ready(function () {
              var currentIntYear = inDateFormat.getFullYear();
              var monthDayYear = currentIntMonth + "/" + currentIntDay + "/" + currentIntYear;
              forecastDateP.append(monthDayYear);
-
+               
+            //temp 
              var forecastTempP = $("</p>");
             var forecastTemp = "Temp: " + results.daily[i].temp.max + " \u00B0F";
             forecastTempP.append(forecastTemp);
@@ -122,5 +123,13 @@ $(document).ready(function () {
             forecastHumP.append(forecastHum);
             forecastSquare.append(forecastDateP, forecastWethIcon, forecastTempP, forecastHumP);
             $("#forecast").append(forecastSquare);
+        };
+    };
+
+    function initLocalStorage() {
+        if (localStorage.getItem("prevCityWeatherSrch") === null) {
+            localStorage.setItem("prevCityWeatherSrch", "[]");
+        } else if (localStorage.getItem("prevCityWeatherSrch") === "[]") {
+            return;
         };
     };
