@@ -10,3 +10,34 @@ h1 {
   padding: 5x;
   margin: 5x;
 }
+
+.btn-info {
+  margin: 2px;
+}
+
+#forecast {
+  padding: 5px;
+  margin: 5px;
+}
+
+.hide {
+  display: none;
+}
+
+.low-uvi {
+  background-color: burlywood;
+  padding: 5px;
+  border-radius: 25%;
+}
+
+.moderate-uvi {
+  background-color: yellow;
+  padding: 4px;
+  border-radius: 25%;
+}
+
+.high-uvi {
+  background-color: orange;
+  padding: 4px;
+  border-radius: 25%;
+}
