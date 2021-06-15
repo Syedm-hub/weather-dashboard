@@ -1,0 +1,12 @@
+h1 {
+  color: white;
+  padding: 12px;
+}
+
+#currentcity {
+  border: solid;
+  border-width: 5px;
+  border-color: blue;
+  padding: 5x;
+  margin: 5x;
+}
