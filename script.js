@@ -92,4 +92,9 @@ $(document).ready(function () {
         $("#currentUvi").append(currentCityUviHolder);
     };
 
+    function fiveDayForecast(results) {
+        $("#forecast").text("");
+        var forecastHeader = $("<h4>");
+        forecastHeader.text("5-Day Forecast:");
+        $("#forecast").append(forecastHeader);
     
