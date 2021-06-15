@@ -98,3 +98,6 @@ $(document).ready(function () {
         forecastHeader.text("5-Day Forecast:");
         $("#forecast").append(forecastHeader);
     
+        for (i = 1; i < 6; i++) {
+            var forecastSquare = $("<div>");
+            forecastSquare.attr("class", "col forecast-square");
