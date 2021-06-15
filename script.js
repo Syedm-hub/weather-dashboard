@@ -101,3 +101,26 @@ $(document).ready(function () {
         for (i = 1; i < 6; i++) {
             var forecastSquare = $("<div>");
             forecastSquare.attr("class", "col forecast-square");
+
+             //date
+             var forecastDateP = $("<p>");
+             var forecastDate = results.daily[i].sunrise;
+             var inMilliseconds = forecastDate * 1000;
+             var inDateFormat = new Date(inMilliseconds);
+             var currentIntMonth = inDateFormat.getMonth() + 1;
+             var currentIntDay = inDateFormat.getDate();
+             var currentIntYear = inDateFormat.getFullYear();
+             var monthDayYear = currentIntMonth + "/" + currentIntDay + "/" + currentIntYear;
+             forecastDateP.append(monthDayYear);
+
+             var forecastTempP = $("</p>");
+            var forecastTemp = "Temp: " + results.daily[i].temp.max + " \u00B0F";
+            forecastTempP.append(forecastTemp);
+            //humidity
+            var forecastHumP = $("<p>");
+            var forecastHum = "Humidity: " + results.daily[i].humidity + "%";
+            forecastHumP.append(forecastHum);
+            forecastSquare.append(forecastDateP, forecastWethIcon, forecastTempP, forecastHumP);
+            $("#forecast").append(forecastSquare);
+        };
+    };
